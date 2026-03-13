@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define int long long int
+int32_t main() {
+    int t = 1;
+    //cin >> t;
+    while (t--) {
+        int n, maxi = INT_MIN, sum = 0;
+        cin >> n;
+        int a[n];
+        for (auto & i: a) {
+            cin >> i;
+            sum += i;
+            maxi = max(maxi, i);
+        }
+        cout << (sum % 2 == 0 && maxi <= sum / 2 ? "Yes\n" : "No\n");
+    }
+}
